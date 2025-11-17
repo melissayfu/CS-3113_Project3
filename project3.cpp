@@ -115,39 +115,6 @@ int main() {
         for (int j = 0; j < R; j++)
             cin >> Request[j];
 
-        // ----- Echo input back -----
-        cout << "R " << R << "\n";
-        cout << "P " << P << "\n";
-        cout << "Available\n";
-        for (int j = 0; j < R; j++) {
-            if (j) cout << " ";
-            cout << Available[j];
-        }
-        cout << "\n";
-
-        cout << "Max\n";
-        for (int i = 0; i < P; i++) {
-            for (int j = 0; j < R; j++) {
-                if (j) cout << " ";
-                cout << Max[i][j];
-            }
-            cout << "\n";
-        }
-
-        cout << "Allocation\n";
-        for (int i = 0; i < P; i++) {
-            for (int j = 0; j < R; j++) {
-                if (j) cout << " ";
-                cout << Allocation[i][j];
-            }
-            cout << "\n";
-        }
-
-        cout << procStr;
-        for (int j = 0; j < R; j++)
-            cout << " " << Request[j];
-        cout << "\n";
-
         // ----- Compute Need = Max - Allocation -----
         vector< vector<int> > Need(P, vector<int>(R));
         for (int i = 0; i < P; i++)
